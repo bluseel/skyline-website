@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admission</title>
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/custom-dropdown.css">
+	<link rel="stylesheet" href="css/admission.css">
+
+  <!--Rajdhani Font for headings-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500;700&amp;display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <div class="center" id="preloader">
+		<div class="ring"></div>
+		<span>loading...</span>
+ </div>
+
+  <!-------------------------HEADER------------------------->
+
+  <div class="body-wrapper">
+
+    
+      <header class="primary-header">
+        <button class="mobile-nav-toggle" aria-expanded="false"></button>
+    
+        <nav class="navigation" data-visible="false">
+          <ul class="primary-navigation">
+            <li class="pages"> <a href="index.html"> <button> Home </button></a></li>
+            <li class="pages"><a href="facilities.html"> <button> Facilities </button></a> </li>
+            <li class="pages"> <a href="admission.html"> <button> Admission </button> </a></li>
+            <li class="pages"> <a href="contact.html"> <button> Contact Us </button></a> </li>
+          </ul>
+        </nav>
+    
+        <div class="logo-name">
+          <div class="logo">
+            <img src="images/logo.png" alt="skyline logo png">
+          </div>
+    
+          <div class="name">
+            <div class="first-name">
+							Skyline Public 
+						</div>
+						<div class="second-name">
+							Highshcool Khairpur
+						</div>
+          </div>
+        </div>
+    
+      </header>
+      
+    
+      <div class="bg__container">
+        <img src="images/school kids.jpg" alt="">
+        <div class="bg__container-text">
+          Admission
+        </div>
+      </div>
+    
+    
+      <div class="wrapper__below">
+        <h1>Admission Form</h1>
+          <form id="form-section">
+            <label for="name">Name:</label>
+            <input type="text" id="name-input" name="name">
+    
+            
+            <label for="father-name">Father's Name:</label>
+            <input type="text" id="father-name-input" name="father-name">
+            
+            <label for="caste">Caste:</label>
+            <input type="text" id="caste-input" name="caste">
+            
+            <label for="gender">Gender:</label>
+            <div class="custom-select" id="gender-input">
+              <div class="select-selected">-Select Gender-</div>
+              <div class="select-options">
+                <div class="select-option">Male</div>
+                <div class="select-option">Female</div>
+              </div>
+            </div>
+            
+            <label for="religion">Religion:</label>
+            <input type="text" id="religion-input" name="religion">
+            
+            <label for="place-of-birth">Place of Birth:</label>
+            <input type="text" id="place-of-birth-input" name="place-of-birth">
+            
+            <label for="date-of-birth-day">Date of Birth:</label>
+            
+            <div class="dob">
+
+              <div class="custom-select" id="date-of-birth-day">
+                <div class="select-selected">-Select Day-</div>
+                <div class="select-options">
+                  <!--options added here from custom-dropdown.js-->
+                </div>
+              </div>
+              
+              
+              <div class="custom-select" id="date-of-birth-month">
+                <div class="select-selected">-Select Month-</div>
+                <div class="select-options">
+                  <!--options added here from custom-dropdown.js-->
+                </div>
+              </div>
+              
+              
+              <div class="custom-select" id="date-of-birth-year">
+                <div class="select-selected">-Select Year-</div>
+                <div class="select-options">
+                  <!--options added here from custom-dropdown.js-->
+                </div>
+              </div>
+              
+              
+            </div>
+
+            <label for="address">Address:</label>
+            <textarea id="address-input" name="address"></textarea>
+            
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone-input" name="phone">
+            
+            <label for="last-school-attended">Last School Attended:</label>
+            <input type="text" id="last-school-attended-input" name="last-school-attended">
+            
+            <div class="tnc-section">
+              <input type="checkbox" id="terms-cb" name="terms">
+              <label for="terms" id="terms-text">I accept the terms and conditions</label>
+            </div>
+            
+            <div class="error-box-container">
+              <div class="error-box" data-visible="true" id="errorPrompt">
+                Please fill out missing fields above
+              </div>
+            </div>
+            <button id="submit-button">
+                Submit
+            </button>
+            
+          </form>
+
+      </div>
+  </div>
+
+	<script src="js/navigation.js"></script>
+	<script src="js/custome-dropdown.js"></script>
+  <script src="js/preloader.js"></script> 
+	<script src="js/admission.js"></script>
+</body>
+</html>

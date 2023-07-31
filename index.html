@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Skyline School</title>
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/carousel.css">
+	<link rel="stylesheet" href="css/header.css">
+
+	<!--Rajdhani Font for headings-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500;700&amp;display=swap" rel="stylesheet">
+
+	
+</head>
+<body>
+
+<!--Announcements-->
+
+
+<!--Preloader-->
+	<div class="center" id="preloader">
+		<div class="ring"></div>
+		<span>loading...</span>
+ </div>
+
+	<!--browsers that parse the <meta name="viewport"> tag simply ignore overflow attributes on the html and body tags.-->
+	<div class="body-wrapper">
+			<header class="primary-header">
+				<button class="mobile-nav-toggle" aria-expanded="false"></button>
+		
+		    <nav class="navigation" data-visible="false">
+					<ul class="primary-navigation">
+						<li class="pages"> <a href="index.html"> <button> Home </button></a></li>
+						<li class="pages"> <a href="facilities.html"> <button> Facilities </button></a> </li>
+						<li class="pages"> <a href="admission.html"> <button> Admission </button> </a></li>
+						<li class="pages"> <a href="contact.html"> <button> Contact Us </button></a> </li>
+					</ul>
+				</nav>
+		
+				<div class="logo-name">
+					<div class="logo">
+						<img src="images/logo.png" alt="skyline logo png">
+					</div>
+		
+					<div class="name">
+						<div class="first-name">
+							Skyline Public 
+						</div>
+						<div class="second-name">
+							Highshcool Khairpur
+						</div>
+					</div>
+				</div>
+			</header>
+			
+			<!--------------Carousel-------------->
+			<div class="carousel">
+					<div class="carousel__track-container">
+						<ul class="carousel__track">
+							<li class="carousel__slide current-slide">
+								<img class="carousel__image" src="images/carousal/slide-1.jpg" alt="" class="src">
+							</li>
+							<li class="carousel__slide">
+								<img class="carousel__image" src="images/carousal/slide-2.jpg" alt="" class="src">
+							</li>
+							<li class="carousel__slide">
+								<img class="carousel__image" src="images/carousal/slide-3.jpg" alt="" class="src">
+							</li>
+							<li class="carousel__slide">
+								<img class="carousel__image" src="images/carousal/slide-4.jpg" alt="" class="src">
+							</li>
+						</ul>
+					</div>
+					
+					<div class="carousel__player">
+						<button class="carousel__button carousel__button--left">
+							<img src="images/carousal/left.svg" alt="">
+						</button>
+		
+						<button class="carousel__button carousel__button--pause-play" data-play="true">
+							<img src="images/carousal/pause.svg" alt="">
+						</button>
+						
+						<button class="carousel__button carousel__button--right">
+							<img src="images/carousal/right.svg" alt="">
+						</button>		
+					</div>
+				
+			</div>
+		
+			<section class="about-us">
+				<div class="section-title">
+					About Us
+				</div>
+				
+				<div class="section-detail">
+					<img src="images/wave-haikei.svg" class="background-image">
+					<div class="about-us__boys-campus">
+						<div class="about-us__boys-campus-image">
+							<img src="images/boys-campus.jpg" alt="" class="">
+						</div>
+						
+						<div class="about-us__boys-campus-info">
+							<div class="title">
+								Boys Campus
+							</div>
+				
+							<div class="detail">
+								Located in Banarus colony, Skyline Boy’s campus is commited to providing quality education to students
+							</div>
+						</div>
+					</div>
+					
+					<div class="about-us__girls-campus">
+						
+						<div class="about-us__girls-campus-info">
+							<div class="title">
+								Girls Campus
+							</div>
+							<div class="detail">
+								Located on same locations just on opposite road. Girl’s campus is passionate to provide educatioh to achieve their goals
+							</div>
+						</div>
+						<div class="about-us__girls-campus-image">
+							<img src="images/girls-campus.jpg" alt="" class="">
+						</div>
+						
+					</div>
+				</div>
+			</section>
+			
+			<section class="education">
+				<div class="education-section-title">
+					Education
+				</div>
+
+				<div class="education-section-detail">
+
+					<div class="education__section">
+						<div class="slanted-div-left">
+							Nursery Section
+						</div>
+	
+						<div class="slanted-div-right">
+							<img src="images/nursery.jpg" alt="">
+						</div>
+					</div>
+
+					<div class="education__section">
+						<div class="slanted-div-right">
+							<!--made this div so i can mirror the inside text, if i did it with dev it mirrows div polygon aswell, thats why meow is inside-->
+							<div class="meow">
+								Primary Section
+							</div>
+						</div>
+	
+						<div class="slanted-div-left">
+							<img src="images/primary.jpg" alt="">
+						</div>
+					</div>
+
+					<div class="education__section">
+						<div class="slanted-div-left">
+							Elementary Section
+						</div>
+	
+						<div class="slanted-div-right">
+							<img src="images/elementary.jpg" alt="">
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+			
+
+	</div>
+	<script src="js/preloader.js"></script>
+	<script src="js/navigation.js"></script>
+	<script src="js/carousel.js"></script>
+	<script src="js/index.js"></script>
+</body>
+</html>

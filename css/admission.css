@@ -1,0 +1,253 @@
+.body-wrapper{
+  overflow-x: hidden;
+}
+
+.bg__container{
+  width: 100vw;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg__container img{
+  background-size: cover;
+  height: 300px;
+  width: 100%;
+}
+
+
+@media only screen and (min-width: 900px) {
+  .bg__container img{
+    object-fit: cover;
+    height: 100vh;
+  }        
+}
+
+.bg__container-text{
+  position: absolute;
+}
+
+.bg__container-text{
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  font-weight: 900;
+  text-shadow: 0px 5px #0000008a;
+}
+
+
+.wrapper__below {  
+  font-family: 'Rajdhani', sans-serif;
+  padding: 20px;  
+  background-image: url(../images/polygon-scatter.svg);
+}
+
+
+
+h1 {
+  -webkit-text-fill-color: white;
+  text-align: center;
+  color: #333;
+  padding: 0 0 10px 0;
+}
+
+ form {
+  background-color: rgb(180, 223, 235);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto;
+} 
+
+
+@media only screen and (min-width: 900px) {
+  form{
+    max-width: 90vw;
+    margin: 0 5vw 5vw 5vw;
+  }          
+}
+
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+@media only screen and (min-width: 900px) {
+  label {
+    margin-bottom: 20px;
+  }          
+}
+
+
+input[type="text"],
+input[type="tel"],
+textarea{
+  margin-top: -0.4rem;
+  margin-bottom: 0.4rem;
+  width: 100%;
+  height: 2rem;
+  border: 1px solid rgb(3, 188, 240);
+  transition: 0.5s;
+  font-size: 0.8rem;
+  font-family: 'Rajdhani',sans-serif;
+  background-color: transparent;
+}
+
+
+@media only screen and (min-width: 900px) {
+  textarea{
+    min-height: 3rem;
+    max-width: 100%;
+
+  }          
+
+  input[type="text"],
+  input[type="tel"],
+  textarea{
+    border: 7px solid rgb(3, 188, 240);
+  }
+
+}
+
+
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+textarea:focus{
+  outline: none;
+  border: 1.8px solid #55555573;
+}
+
+
+@media only screen and (min-width: 900px) {
+  input[type="text"]:focus,
+  input[type="tel"]:focus,
+  textarea:focus{
+    outline: none;
+    border: 6.8px solid #55555573;
+  }    
+}
+
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+.dob{
+  display: grid;
+  grid-template-columns: 0.9fr 1fr 0.9fr;
+  column-gap: 5px;
+  font-size: 0.8rem;
+}
+
+.tnc-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  padding: 10px 0;
+}
+
+.tnc-section #terms-text{
+  margin: 3px 0 0 0;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+  border-color: white;
+  background-color: black;
+}
+
+
+@media only screen and (min-width: 900px) {  
+  input[type="checkbox"] {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-right: 10px;
+  }
+          
+}
+
+
+
+#submit-button {
+  width: 100%;
+  padding: 0.5rem 0;
+  border: none;
+  border-radius: 0;
+  
+  background-color:  rgb(3, 188, 240);
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 900;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 120ms;
+}
+
+#submit-button:active {
+  opacity: 1;
+}
+
+.error-box-container{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+  color: red;
+  font-weight: 900;
+}
+
+.error-box[data-visible="true"]{
+  display:block;  
+}
+
+.error-box[data-visible="false"]{
+  display: none;
+}
+
+
+.error-placeholder::placeholder {
+  color: #ff0000;
+  font-weight: 900;
+}
+
+.error-input-animation {
+  animation-name: myAnimation;
+  animation-duration: 1s;
+}
+
+.red-text{
+  color: red;
+}
+.black-text{
+  color: black;
+}
+
+@keyframes myAnimation {
+  0% {
+    transform: translateX(10px);
+  }
+  
+  25% {
+    transform: translateX(-10px);
+  }
+  
+  50%{
+    transform: translateX(10px);
+  }
+  
+  75%{
+    transform: translateX(-10px);
+  }
+  
+  100% {
+    transform: translateX(0);
+  }
+}

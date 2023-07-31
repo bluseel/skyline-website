@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/contact.css">
+
+  <!--Rajdhani Font for headings-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500;700&amp;display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="center" id="preloader">
+		<div class="ring"></div>
+		<span>loading...</span>
+ </div>
+
+
+  <!--Script for contact form-->
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init("tIfNn14Sh838k9l72");
+    })();
+  </script>
+  <script src="js/contact.js"></script>
+
+  <!--Screentshot script html2canvas-->
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+
+  <div class="body-wrapper">
+
+    <!-------------------------HEADER------------------------->
+      <header class="primary-header">
+        <button class="mobile-nav-toggle" aria-expanded="false"></button>
+    
+        <nav class="navigation" data-visible="false">
+          <ul class="primary-navigation">
+            <li class="pages"> <a href="index.html"> <button> Home </button></a></li>
+            <li class="pages"><a href="facilities.html"> <button> Facilities </button></a> </li>
+            <li class="pages"> <a href="admission.html"> <button> Admission </button> </a></li>
+            <li class="pages"> <a href="contact.html"> <button> Contact Us </button></a> </li>
+          </ul>
+        </nav>
+    
+        <div class="logo-name">
+          <div class="logo">
+            <img src="images/logo.png" alt="skyline logo png">
+          </div>
+    
+          <div class="name">
+            <div class="first-name">
+							Skyline Public 
+						</div>
+						<div class="second-name">
+							Highshcool Khairpur
+						</div>
+          </div>
+        </div>
+      </header>
+      
+      <!--Contact Us bg-->
+      
+      <div class="contact__us">
+        <img src="images/contact.jpg" alt="">
+        <div class="contact__us-text">
+          Contact Us
+        </div>
+      </div>
+      
+      <div class="wrapper__below">
+    
+        
+        <div class="contact__us--info">
+          <div class="contact__us--info-address">
+            <h2>Address (Both Campuses):</h2> 
+            Near National Medical Center, Chandia More, on Civil Hospital Road, Khairpur Mir's 
+       
+          </div>
+          
+          <div class="contact__us--info-phone">
+            <h2>Phone:</h2>
+            0304-3774064 <br>
+            0311-3733970 <br>
+            0243-685038
+          </div>
+        </div>
+      
+          
+        <div class="contact__us--form">
+          <h2>Any question or query?</h2>
+          
+          <div class="form">
+            
+            <label for="name"> <strong>Your Name:</strong> </label>
+            <input type="text" name="name" id="name" placeholder="eg. Shafique Sahito">
+      
+            <label for="email"> <strong>Your Email: </strong>  </label>
+            <input type="text" name="email" id="email" placeholder="eg. shafiquesahito@example.com">
+    
+            <label for="Phone"> <strong>Your Phone: </strong>  </label>
+            <input type="text" name="phone" id="phone" placeholder="eg. 0300-1234567">
+            
+            <label for="message"> <strong>Your Message:</strong>  </label>
+            <textarea id="message" name="message" rows="5" required placeholder="Any thing you want to ask from us"></textarea>  
+         
+            <button class="contact__us--form-submit" onclick="sendMail()"> Submit </button>
+            
+          </div>
+        
+        </div>
+      
+        <div class="social-media-handles">
+          <div class="title">
+            <h2>Social Media</h2> 
+          </div>
+          <div class="detail">
+            <div class="handle">
+              <a href="https://web.facebook.com/profile.php?id=100078022390227"> <img src="images/fb.svg" alt=""> </a>
+            </div>
+            
+            <div class="handle">
+              <a href="https://api.whatsapp.com/send?phone=%2B923043774064&data=ARCv8jGOa0ngHsaCRE2eXye_ABTu62oQGWgUMwcv_G_go6_W1z7s2yiwFeKPEhHWqYa3aikCBgd12CjBqmwIjJCDzszC9Jr6B5EJmtQHVJZ4spVMhF64RtoakF2HNRfb5FhE9bUwOcyuuZ76tK0Tb8gmSg&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwAR0Um_-MX6w6qK1DDeIB5HVxYX4dmaqhckXHuLEBcVzcaM2Q0C0pKH1G2HI">
+                <img src="images/whatsapp.svg" alt=""> </a>
+            </div>
+            
+            <div class="handle">
+              <a href="mailto:muhammadnawazsahito@gmail.com"> <img src="images/email.svg" alt=""> </a>
+            </div>
+    
+          </div>
+        </div>
+        
+        <div class="map">
+          <div class="title">
+            <h2>Google Map</h2>
+          </div>
+    
+          <div class="detail">
+            Tap/Click on "View larger map" to open in Google maps or navigate from below:
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3538.4130083245245!2d68.7462986742462!3d27.518625233792143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3935db7f2837b081%3A0xd02d7f34d0769867!2sSkyline%20Public%20Highschool!5e0!3m2!1sen!2s!4v1688908333552!5m2!1sen!2s" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      
+      
+      </div>
+  </div>
+
+	<script src="js/preloader.js"></script>
+	<script src="js/navigation.js"></script>
+</body>
+</html>

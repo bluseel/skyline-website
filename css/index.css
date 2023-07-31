@@ -1,0 +1,289 @@
+  
+/********************** ABOUT US SECTION **********************/
+.about-us{
+
+  height: 50vh;
+  position: relative;
+  background: linear-gradient(to bottom right, #0066ff 0%, #ee4e91 75%);
+}
+
+
+
+@media only screen and (min-width: 900px) {
+  .about-us{
+    height: 100vh;
+  }   
+}
+
+.about-us .section-title{
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-top: 10px;
+}
+
+.about-us .section-detail{
+  height: inherit;
+  margin: 10px 10px -100px 10px;
+}
+
+
+@media only screen and (min-width: 900px) {
+  .about-us .section-detail{
+    margin: 0 10vw 0 10vw;
+ }   
+}
+
+.about-us .background-image{
+  width: 100%;
+  height: 82%;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+/* BOYS CAMPUS */
+.about-us__boys-campus{
+  position: absolute;
+  inset: 8vh 0 0 14px;
+
+  display: flex;
+}
+
+
+@media only screen and (min-width: 900px) {
+  .about-us__boys-campus{
+    inset: 15vh 15vw 0 15vw;
+  }   
+}
+
+.about-us__boys-campus-image{
+  flex: 0.6;
+}
+
+.about-us__boys-campus-image img{
+  width: 100%;
+  border-radius: 20%;
+  min-height: 120px;
+  object-fit: cover;
+}
+
+.about-us__boys-campus-info{
+  flex: 1;
+  margin-left: 10px;
+  margin-right: 14.7px;
+  color: white;
+  font-family: 'Rajdhani';
+  font-size: 1rem;
+  
+}
+
+.about-us__boys-campus-info .title{
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+
+
+/* GIRLS CAMPUS */
+.about-us__girls-campus{
+  position: absolute;
+  inset: 30vh 15px 0 0;
+  margin-left: 10px;
+  display: flex;
+}
+
+
+@media only screen and (min-width: 900px) {
+  .about-us__girls-campus{
+    inset: 55vh 15vw 0 15vw;
+  }   
+}
+
+.about-us__girls-campus-image{
+  flex: 0.5;
+}
+
+
+
+.about-us__girls-campus-image img{
+  width: 100%;
+  border-radius: 20%;
+  min-height: 120px;
+  object-fit: cover;
+}
+
+@media only screen and (min-width: 900px) {
+  .about-us__girls-campus-image img{
+    height: 35vh 
+  }
+}
+
+.about-us__girls-campus-info{
+  flex: 1;
+  margin-right: 10px;
+  color: white;
+  font-family: 'Rajdhani',sans-serif;
+  text-align: right;
+  font-size: 1rem;
+}
+
+.about-us__girls-campus-info .title{
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+
+/********************** Education ***********************/
+
+.education{
+  height: 50vh;
+  background-image: linear-gradient(to bottom right, #22c1c3, #D3CBB8);
+}
+
+
+@media only screen and (min-width: 900px) {
+  .education{
+    height: 100vh;
+  }   
+}
+
+.education-section-title{
+  padding: 10px 0 10px 0;
+
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.education-section-detail{
+  padding: 0 10px 0 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+
+@media only screen and (min-width: 900px) {
+  .education-section-detail{
+    padding: 0 12vw;
+    margin: 0;
+  }   
+}
+
+.education__section{
+  display: flex;
+  position: relative;
+}
+
+.slanted-div-left {
+  position: relative;
+  clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);  
+  
+  width: 54vw;
+  height: 100px;
+  transform: translateX(0.5px);
+  
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+
+@media only screen and (min-width: 900px) {
+  .slanted-div-left{
+    height: 25vh;
+  }    
+}
+
+
+
+.slanted-div-right {
+  position: absolute;
+  right: 0;
+  width: 54vw;
+  height: 100px;
+  clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);  
+  background-color: red;
+  
+  transform: scale(-1,-1) translate(0.5px);
+}
+
+
+@media only screen and (min-width: 900px) {
+  .slanted-div-right{
+    height: 25vh;
+    width: 44vw;
+  }    
+}
+
+.slanted-div-right img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+  transform: scale(-1,-1);
+}
+
+
+.education__section:nth-child(2) .slanted-div-right .meow{
+  display: flex;
+  transform: scale(-1,-1);
+  position: relative;
+  top: 40%;
+  left: -20%;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+
+.education__section:nth-child(1) .slanted-div-left{
+  background-color: #6a8cbe;
+}
+.education__section:nth-child(2) .slanted-div-right{
+  background-color: #acb932;
+}
+.education__section:nth-child(3) .slanted-div-left{
+  background-color: #4be297;
+}
+
+.education__section:nth-child(2) .slanted-div-left{
+  display: block;
+  width: 215px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.education__section:nth-child(2) .slanted-div-left img{
+  display: block;
+  width: 215px;
+  height: 100px;
+  object-fit: cover;
+}
+
+
+@media only screen and (min-width: 900px) {
+  .education__section:nth-child(2) .slanted-div-left {
+    height: 25vh;
+    width: 43vw;
+  }
+  .education__section:nth-child(2) .slanted-div-left img{
+    width: 43vw;
+    height: 40vh;
+  }
+}
+
+.education__section:nth-child(3) .slanted-div-left{
+  padding-right: 9%;
+}
+.education__section:nth-child(1) .slanted-div-left{
+  padding-right: 10%;
+}
+

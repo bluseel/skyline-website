@@ -1,0 +1,115 @@
+*,
+*::after,
+*::before{
+  box-sizing: border-box;
+}
+
+ul, li{
+  margin:0;
+  padding: 0;
+}
+
+/*Caroual*/
+.carousel{
+  position: relative;
+  height: 50vh;
+  width: 100vw;
+  /* overflow-x: hidden; */
+  background-color: black;
+}
+
+
+@media only screen and (min-width: 900px) {
+  .carousel{
+    height: 100vh;
+  }
+}
+
+
+.carousel__track-container{
+}
+
+.carousel__track{
+  position: relative;
+  list-style: none;
+  transition: transform 250ms ease-in;
+  
+}
+
+.carousel__slide{
+  position: absolute;
+  display: flex; 
+  height: 50vh;
+  
+}
+
+
+@media only screen and (min-width: 900px) {
+  .carousel__slide{
+    height: 100vh;
+  }  
+}
+
+
+.carousel__image{
+  position: relative;
+  object-fit:cover;
+  
+  width: 100vw;
+  height: 100%;
+}
+
+/*Caroual bottom player*/
+.carousel__player{
+  position: absolute;
+  
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0px;
+
+  display: flex;
+  
+}
+
+
+.carousel__player{
+  margin-bottom: 10px;
+  padding: 1% 0%;
+  background: rgba(255, 255, 255, 0.31);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.2px);
+  -webkit-backdrop-filter: blur(5.2px);
+}
+
+
+@media only screen and (min-width: 900px) {
+ .carousel__player{
+  padding: 1%;
+  column-gap: 20px;
+ }   
+}
+
+.carousel__button{
+  border: none;
+  background-color: transparent;
+}
+
+.carousel__button:hover{
+  cursor: pointer;
+}
+
+.carousel__button img{
+  width: 25px;
+}
+
+
+@media only screen and (min-width: 900px) {
+  .carousel__button img{
+    width: 30px;
+  }   
+}
+
+
+
+

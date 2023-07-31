@@ -1,0 +1,408 @@
+*,
+*::after,
+*::before{
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 16px;
+  --heading-font-size: 1.04rem;
+}
+
+
+h1, h2, img, div, body, svg{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+}
+
+.body-wrapper{
+  width: 800px;
+  margin: 0 auto; /* Center the wrapper horizontally */
+  overflow: hidden;
+}
+
+.final__form-wrapper{
+  background-color: transparent;
+  padding: 10px;
+  margin: 100px 460px 100px 100px;
+}
+
+.final__form{
+  border: 20px solid black;
+  margin: 100px;
+  width: 2480px;
+  height: 3508px;
+  pointer-events: none;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.final__form--header{
+  display: flex;
+}
+
+.final__form--header .info{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.final__form--header .info .title{
+  font-size: 10rem;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  color: rgb(145, 36, 36);
+  text-align: center;
+  transform: scaleY(1.5);
+}
+
+.final__form--header .info .reg{
+  font-size: 4rem;
+  font-family: 'Gill Sans', Calibri;
+  font-weight: 600;
+  text-align: right;
+  margin: -20px 70px 0 0;
+}
+
+.final__form--header .info .address, .phone{
+  font-size: 4rem;
+  font-weight: 900;
+  text-align: center;
+  color: rgb(55, 55, 173);
+  font-family: 'Gill Sans', Calibri;
+
+  transform: translateX(-10%);
+  
+}
+
+.final__form--header .logo img{
+  width: 420px;
+  margin-right: 0.4rem;
+}
+
+/*Admission form heading with trapizium*/
+
+.admission__form-container{
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.admission__form-container img{
+  filter: brightness(1.2);
+  transform: scaleY(1.04);
+}
+
+
+/******* Personal details *******/
+.credentials-container{
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+
+.credential{
+  display: flex;
+  position: relative;
+}
+
+.credential-label{
+  margin: 3rem 2rem 0 0;
+  font-size: 3.2rem;
+  font-style:italic;
+  color: rgb(55, 55, 173);
+}
+
+.credential-input{
+  flex: 1;
+  border-bottom: 1px solid  rgb(55, 55, 173);
+}
+
+.credential-input-text{
+  position: absolute;
+  bottom: 2px;
+  font-size: 4rem;
+}
+
+.three-sectioned{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 2rem;
+}
+
+.undertaking{
+  margin: 0 30px;
+}
+
+.undertaking-text-container{
+ display: flex;
+ justify-content: center;
+ text-align: center;
+ margin-top: 2.5rem;
+}
+
+.undertaking-text{
+  filter: brightness(1.2);
+}
+
+/* office__use */
+
+.office__use{
+  margin: 0 30px;
+}
+
+.office__use-text-container{
+ display: flex;
+ justify-content: center;
+ text-align: center;
+ margin-top: 2.5rem;
+}
+
+.office__use-text img{
+  filter: brightness(1.2);
+}
+
+.two-sectioned{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+}
+
+.four-sectioned{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 2rem;
+  margin-top: 50px;
+  transform: translateX(10%);
+}
+
+.four-sectioned-v2{
+  display: grid;
+  grid-template-columns: 25.3rem 32.5rem 32rem 36.5rem;
+  margin: 20px 150px 0 150px;
+}
+
+.four-sectioned-v2 .section{  
+  position: relative;
+}
+
+.four-sectioned-v2 .section .label{
+  font-size: 3.2rem;
+  font-style:italic;
+  color: rgb(55, 55, 173);
+}  
+
+.four-sectioned-v2 .section .blank{
+  border-bottom: 5px solid blue;
+  margin-right: 20px;
+  margin-left: 60px;
+}
+
+.signature-container{
+  text-align: right;
+  padding-top: 130px;
+}
+
+.signature{
+  font-size: 3.2rem;
+  font-style: italic;
+  color: rgb(55, 55, 173);
+}
+
+.office__use .signature-container{
+  padding-top: 200px;
+}
+
+/* BUTTONS */
+
+.buttons-container{
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  aspect-ratio: 2/3;
+  background-image: url(../images/blurry-gradient.svg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 50px;
+}
+
+
+.text-container{
+  font-size: 2rem;
+}
+
+.buttons-container .text-container{
+  text-align: center;;
+  font-family: 'Rajdhani', sans-serif;
+  color: white;
+  font-weight: 900;
+}
+
+
+@media only screen and (min-width: 900px) {
+ .buttons-container .text-container{
+  margin: 0 10vw;
+ }  
+}
+
+
+.both-buttons{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+}
+
+
+
+button[id='submit-btn']{
+  width: 45vw;
+  font-size: 3rem;
+  border: none;
+  background: green;
+  color: white;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+button[id='preview-btn']{
+  width: 45vw;
+  font-size: 3rem;
+  border: none;
+  background: blue;
+  color: white;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+button[id='cancel-btn']{
+  width: 45vw;
+  font-size: 3rem;
+  border: none;
+  background: red;
+  color: white;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+
+@media only screen and (min-width: 900px) {
+  .both-buttons{
+    display: grid;
+  }
+ }
+
+button[id='cancel-btn'] a{
+  color: inherit;
+  text-decoration: none;
+}
+
+button:focus{
+  opacity: 1;
+}
+
+
+    /* Mirror */
+    
+    #mirror-container-container{
+      position: relative;
+    }
+    
+    #mirror-container{
+      position: absolute;
+      z-index: 100;
+      top: 50px;
+      width: 100vw;
+      aspect-ratio: 1/1.5;
+      overflow: hidden;
+      border: 1px solid #ccc;
+    }
+      
+    #mirror-container[data-visible="false"]{
+      display: none;
+    }
+    
+    #mirror-container[data-visible="true"]{
+      display: block;
+    }
+    
+      #mirror {
+        width: 100%;
+        height: 100%;
+      }
+
+    @media only screen and (min-width: 900px) {
+      #mirror-container{
+        position: absolute;
+        z-index: 100; 
+        right: 250px;
+        width: 1000px;
+        aspect-ratio: 1/1.5;
+      }
+    }   
+  
+    #cross, #close-preview-text{
+      position: absolute;
+      z-index: 9999;
+      top: 1%;
+      right: 50%;
+    }
+    
+    
+
+    #close-preview-text{
+      right: 38%;
+      width: 30px;
+      font-size: 1rem;
+      font-weight: 900;
+      font-family: 'Rajdhani', sans-serif;
+    }
+    
+  @media only screen and (min-width: 900px) {
+    #close-preview-text{
+      position: absolute;
+      z-index: 9999;
+      top: 2%;
+      right:47.5%;
+      line-height: 15px;
+    }      
+  }
+    #cross{
+      width: 40px;
+    }
+    
+  @media only screen and (min-width: 900px) {
+    #cross{
+      position: absolute;
+      z-index: 9999;
+      top: 1%;
+      right:50%;
+    
+    }
+}
+    #close-preview-text{
+      width: 40px;
+    }
+
+    #cross[data-visible="false"], #close-preview-text[data-visible="false"]{
+      display: none;
+    }
+    
+    #cross[data-visible="true"], #close-preview-text[data-visible="true"]{
+      display: block;
+    }
+
+
+

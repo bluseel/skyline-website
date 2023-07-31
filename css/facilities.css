@@ -1,0 +1,144 @@
+.body-wrapper{
+  overflow-x: hidden;
+  background-color: black;
+  height: 100vh;
+}
+
+.bg__container{
+  position: relative;
+  width: 100vw;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg__container img{
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+}
+
+
+@media only screen and (min-width: 900px) {
+  .bg__container img{
+    object-fit: cover;
+    height: 100vh;
+  }          
+}
+
+
+.bg__container-text{
+  position: absolute;
+}
+
+.bg__container-text{
+  align: center;
+  color: white;
+  font-size: 3rem;
+  font-weight: 900;
+  text-shadow: 0px 5px #0000008a;
+}
+
+
+.wrapper__below {  
+  font-family: 'Rajdhani', sans-serif;
+  padding: 20px;  
+  background-image: url(../images/stacked-waves.svg);
+  background-size:cover;
+}
+
+
+@media only screen and (min-width: 900px) {
+   .wrapper__below{
+    padding-top: 100px;
+   }         
+}
+
+.facilities{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+
+@media only screen and (min-width: 900px) {
+  .facilities{
+    display: grid;
+    grid-template-columns: 40vw 40vw;
+    justify-content: center;
+    column-gap: 50px;
+  }          
+}
+
+.facility{
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.3px);
+  -webkit-backdrop-filter: blur(0.3px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  height: 150px;
+}
+
+@media only screen and (min-width: 900px) {
+  .facility{
+    height: 270px;
+  }          
+}
+
+
+.facility .picture{
+  flex: 0.8;
+  border-right: 1px solid rgb(255, 255, 255, 0.4);
+}
+
+.facility .picture img{
+  border-radius: 100%;
+  width: 8rem;
+  aspect-ratio: 1;
+}
+
+.facility .detail{
+  flex: 1;
+  margin-left: 15px;
+}
+
+.facility .detail .title{
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.facility .detail .sub-text{
+  font-size: 0.8rem;
+}
+
+
+.facility:nth-child(even){
+  flex-direction: row-reverse;
+}
+
+.facility:nth-child(even) .picture{
+  flex: 0;
+  border-right: none;
+  border-left: 1px solid rgb(255, 255, 255, 0.4);
+  padding-left: 12px;
+}
+
+.facility:nth-child(even) .detail{
+  margin-left: 0;
+  padding-right: 12px;
+}
+
+
+@media only screen and (min-width: 900px) {
+  .facility:nth-child(odd) .picture{
+    padding-right: 10px;
+  }
+}
