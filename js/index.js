@@ -1,3 +1,12 @@
+const allMessageContainerElem = document.getElementById('allMessageContainer');
+const messagesContainerElem = allMessageContainerElem.querySelector('#messages-container');
+const headingElem = allMessageContainerElem.querySelector('#messages-container___header');
+
+headingElem.addEventListener("click", ()=>{
+  allMessageContainerElem.style.display = "none";
+});
+
+
 // Create an empty array to store the announcements
 let announcementsData = [];
 
@@ -25,6 +34,7 @@ function processAnnouncements() {
   // Check if all announcements are null
   if (filteredAnnouncements.length === 0) {
     console.log("Nothing to announce");
+    allMessageContainerElem.style.display = "none";
     return;
   }
   
@@ -49,9 +59,61 @@ function processAnnouncements() {
       console.log("Subtext:", announcement.subtext);
     }
 
+    addAnnouncementToHTML(announcement);
 
     console.log("---------------------");
   });
+}
+
+function addAnnouncementToHTML(announcement){
+  const message = document.createElement('div');
+  message.classList.add('message');
+  
+  const messageTitle = document.createElement('div');
+  messageTitle.classList.add('message--title');
+  messageTitle.textContent = announcement.heading;
+  
+  const messageDetail = document.createElement('div');
+  messageDetail.classList.add('message__detail');
+
+  const messageDetail_Text = document.createElement('div');
+  messageDetail_Text.classList.add('message__detail--text');
+  messageDetail_Text.textContent = announcement.subtext;
+
+  const messageDetail_ButtonContainer = document.createElement('div');
+  messageDetail_ButtonContainer.classList.add('message__detail--button-container');
+
+  const messageDetail_Button_Ahref = document.createElement('a');
+  messageDetail_Button_Ahref.classList.add('message__detail--button--ahref');
+  messageDetail_Button_Ahref.setAttribute('href',announcement.link);
+
+  const messageDetail_Button = document.createElement('button');
+  messageDetail_Button.classList.add('message__detail--button');
+  messageDetail_Button.textContent = announcement.buttonName;
+  
+
+  if(announcement.addButton){
+     // Append the elements to the container
+     messageDetail_Button_Ahref.appendChild(messageDetail_Button);
+     messageDetail_ButtonContainer.appendChild(messageDetail_Button_Ahref);
+
+     messageDetail.appendChild(messageDetail_Text);
+     messageDetail.appendChild(messageDetail_ButtonContainer);
+
+     message.appendChild(messageTitle);
+     message.appendChild(messageDetail);
+
+     messagesContainerElem.appendChild(message);
+  }else{
+     // Append the elements to the container
+     messageDetail.appendChild(messageDetail_Text);
+
+     message.appendChild(messageTitle);
+     message.appendChild(messageDetail);
+
+     messagesContainerElem.appendChild(message);
+  }
+
 }
 
 // Call the loadAnnouncements function to fetch the JSON data
