@@ -30,7 +30,7 @@ function showSuccessMessage(message) {
   
   //change icon to 'Tick', message to 'Success' and button to 'Go Home'
   icon.querySelector('img').setAttribute('src','images/tickMessage.png')
-  response.firstChild.textContent = "Form sent Successfully :)";
+  response.firstChild.textContent = "Form sent Successfully :) \nPlease visit our school to confirm your admission. Address is on Contact Page";
   btn.firstChild.innerText = 'Go To Main Page';
  
 }
@@ -43,7 +43,7 @@ function showFailureMessage() {
   icon.style.display= 'flex';
   
   icon.querySelector('img').setAttribute('src','images/crossMessage.png')
-  response.firstChild.textContent = "Error while sending form :(";
+  response.firstChild.textContent = "Error while sending form :( \nPlease visit our campus to get your admission. Address is on Contact Page";
   btn.firstChild.innerText = 'Close';
   // btn.setAttribute('href', "https://www.google.com")
 

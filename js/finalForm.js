@@ -247,6 +247,7 @@ UnameElem.innerText = data.name;
 
 
 //preview thingy -------------------------
+const previewOverlayElem = document.getElementById('previewOverlay');
 const mirrorContainer = document.getElementById('mirror-container');
 const mirrorImage = document.getElementById('mirror');
 const previewElem = document.getElementById('preview-btn');
@@ -260,17 +261,30 @@ html2canvas(document.querySelector('.final__form')).then(function(canvas) {
 });
 
 previewElem.addEventListener('click', ()=>{
-
-  mirrorContainer.setAttribute('data-visible',true);
-  cross.setAttribute('data-visible',true);
-  closePreviewTextElem.setAttribute('data-visible',true);
+  showPreview();
 });
 
 cross.addEventListener('click', () =>{
+  hidePreview();
+});
+
+closePreviewTextElem.addEventListener('click', ()=>{
+  hidePreview();
+})
+
+function hidePreview(){
   mirrorContainer.setAttribute('data-visible',false);
   cross.setAttribute('data-visible',false);
   closePreviewTextElem.setAttribute('data-visible',false);
-});
+  previewOverlayElem.setAttribute('data-visible',false);
+}
+
+function showPreview(){
+  mirrorContainer.setAttribute('data-visible',true);
+  cross.setAttribute('data-visible',true);
+  closePreviewTextElem.setAttribute('data-visible',true);
+  previewOverlayElem.setAttribute('data-visible',true);
+}
 
 closePreviewTextElem.addEventListener('click', ()=>{
   mirrorContainer.setAttribute('data-visible',false);
