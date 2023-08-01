@@ -379,8 +379,15 @@ button:focus{
       top: 1%;
       right: 50%;
       line-height: 1;
+      color: red;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 150ms ease-in opacity; 
     }
-    
+
+    #cross:hover, #cross:focus, #close-preview-text:hover, #close-preview-text:focus{
+      opacity: 0.5;
+    }
     
 
     #close-preview-text{

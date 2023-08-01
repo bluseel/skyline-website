@@ -30,7 +30,7 @@ function showSuccessMessage(message) {
   
   //change icon to 'Tick', message to 'Success' and button to 'Go Home'
   icon.querySelector('img').setAttribute('src','images/tickMessage.png')
-  response.firstChild.textContent = "Form sent Successfully :) \nPlease visit our school to confirm your admission. Address is on Contact Page";
+  response.firstChild.textContent = "Form sent Successfully :) Please visit our school to confirm your admission. Address is on Contact Page";
   btn.firstChild.innerText = 'Go To Main Page';
  
 }
@@ -43,9 +43,32 @@ function showFailureMessage() {
   icon.style.display= 'flex';
   
   icon.querySelector('img').setAttribute('src','images/crossMessage.png')
-  response.firstChild.textContent = "Error while sending form :( \nPlease visit our campus to get your admission. Address is on Contact Page";
+  response.firstChild.textContent = "Error while sending form :( Please visit our campus to get your admission. Address is on Contact Page";
   btn.firstChild.innerText = 'Close';
   // btn.setAttribute('href', "https://www.google.com")
+
+}
+
+function showFailureMessageForContact(){
+  response.style.display= 'flex';
+  icon.style.display= 'flex';
+  
+  icon.querySelector('img').setAttribute('src','images/crossMessage.png')
+  response.firstChild.textContent = "Error while sending :( Please visit our campus to get while we fix the issue";
+  btn.firstChild.innerText = 'Close';
+  response-button-container.setAttribute('href','contact.html');
+}
+
+function showSuccessMessageForContact(message) {
+  response.style.display= 'flex';
+  icon.style.display= 'flex';
+  
+  //change icon to 'Tick', message to 'Success' and button to 'Go Home'
+  icon.querySelector('img').setAttribute('src','images/tickMessage.png')
+  response.firstChild.textContent = "Message sent Successfully :) We will respond back as soon as possible";
+  btn.firstChild.innerText = 'Close';
+  response-button-container.setAttribute('href','contact.html');
+  return true;
 
 }
 

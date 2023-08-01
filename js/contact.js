@@ -1,3 +1,40 @@
+//*************************** PHONE VERFICATION ***************************
+function validatePhone() {
+  
+  var phoneField = document.getElementById("phone");
+  var phone = phoneField.value;
+  
+  // Regular expression for name validation
+  var nameRegex = /^[A-Za-z]+$/;
+  
+  if(phone===""){
+    phoneField.setAttribute("placeholder", "Error: Phone field can not be empty");
+    phoneField.value = "";
+    phoneField.classList.add("error");
+    phoneField.classList.add("error-input-animation");
+    phoneField.focus();
+    return false;
+    
+  }else if (nameRegex.test(phone)) {
+    phoneField.setAttribute("placeholder", "Error: Invalid phone number");
+    phoneField.value = "";
+    phoneField.classList.add("error");
+    phoneField.classList.add("error-input-animation");
+    phoneField.focus();
+    return false;
+    
+  } else {
+    phoneField.setAttribute("placeholder", "eg. 030-1234567, 030-7654321 ...");
+    phoneField.classList.remove("error");
+    phoneField.classList.remove("error-input-animation");
+    
+    return true;
+  }
+}
+
+
+
+
 //*************************** EMAIL VERFICATION ***************************
 function validateEmail() {
   
@@ -67,52 +104,61 @@ function validateName() {
 }
 
 //*************************** Message VERFICATION ***************************
-function validateMessage() {
+function validateQuery() {
   
-  var messageField = document.getElementById("message");
-  var message = messageField.value;
+  var queryField = document.getElementById("query");
+  var query = queryField.value;
   
-  if(message===""){
-    messageField.setAttribute("placeholder", "Error: Message field can not be empty");
-    messageField.value = "";
-    messageField.classList.add("error");
-    messageField.classList.add("error-input-animation");
-    messageField.focus();
+  if(query===""){
+    queryField.setAttribute("placeholder", "Error: Message field can not be empty");
+    queryField.value = "";
+    queryField.classList.add("error");
+    queryField.classList.add("error-input-animation");
+    queryField.focus();
     return false;
     
   }else {
-    messageField.setAttribute("placeholder", "Any thing you want to ask from us");
-    messageField.classList.remove("error");
-    messageField.classList.remove("error-input-animation");
+    queryField.setAttribute("placeholder", "Any thing you want to ask from us");
+    queryField.classList.remove("error");
+    queryField.classList.remove("error-input-animation");
     
     return true;
   }
 }
 
 function sendMail() {
-  if (validateName() && validateEmail() && validateMessage()){
+  if (validateName() && validateEmail() && validatePhone() && validateQuery()){
     var params = {
       name: document.getElementById("name").value,
       email: document.getElementById("email").value,
-      message: document.getElementById("message").value,
+      phone: document.getElementById("phone").value,
+      message: document.getElementById("query").value,
+      
     };
   }else{
+
     return;
   }
-  
-  
+  showMessageBox();
+
   const serviceID = "service_3uvdrk8";
-  const templateID = "template_hb7x4t2";
+  const templateID = "template_ge2gp0p";
 
     emailjs.send(serviceID, templateID, params)
     .then(res=>{
         document.getElementById("name").value = "";
         document.getElementById("email").value = "";
-        document.getElementById("message").value = "";
+        document.getElementById("query").value = "";
+        document.getElementById("phone").value = "";
         console.log(res);
-        alert("Your message sent successfully!!")
-
+        hideLoadingRing();
+        showSuccessMessageForContact();
     })
-    .catch(err=>console.log(err));
+    .catch(err=>{
+      console.log(err);
+      hideLoadingRing();
+      if(!showSuccessMessageForContact())
+        showFailureMessageForContact();
+    });
 
 }

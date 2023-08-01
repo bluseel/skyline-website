@@ -6,6 +6,7 @@
   <title>Contact Us</title>
 	<link rel="stylesheet" href="css/header.css">
 	<link rel="stylesheet" href="css/contact.css">
+	<link rel="stylesheet" href="css/messageBox.css">
 
   <!--Rajdhani Font for headings-->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,20 +20,6 @@
 		<span>loading...</span>
  </div>
 
-
-  <!--Script for contact form-->
-  <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-  </script>
-  <script type="text/javascript">
-    (function(){
-        emailjs.init("tIfNn14Sh838k9l72");
-    })();
-  </script>
-  <script src="js/contact.js"></script>
-
-  <!--Screentshot script html2canvas-->
-  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 
 
   <div class="body-wrapper">
@@ -106,13 +93,15 @@
             <input type="text" name="email" id="email" placeholder="eg. shafiquesahito@example.com">
     
             <label for="Phone"> <strong>Your Phone: </strong>  </label>
-            <input type="text" name="phone" id="phone" placeholder="eg. 0300-1234567">
+            <input type="text" name="phone" id="phone" placeholder="eg. 030-1234567, 030-7654321 ...">
             
-            <label for="message"> <strong>Your Message:</strong>  </label>
-            <textarea id="message" name="message" rows="5" required placeholder="Any thing you want to ask from us"></textarea>  
+            <label for="query"> <strong>Your Message:</strong>  </label>
+            <textarea id="query" name="query" rows="5" required placeholder="Any thing you want to ask from us"></textarea>  
          
             <button class="contact__us--form-submit" onclick="sendMail()"> Submit </button>
             
+            <!-- this is just trashy button, in my messageBox.js it needs a button so i have made this to not cause error its uselesss otherwise -->
+            <button id ="submit-btn" style="display: none;"> Submit </button>
           </div>
         
         </div>
@@ -153,7 +142,50 @@
       </div>
   </div>
 
-	<script src="js/preloader.js"></script>
-	<script src="js/navigation.js"></script>
+  <!-- Message box that shows when you send any query -->
+  <div id="overlay"></div>
+  <div id="message">
+    <!-- loaind -->
+    <div id="loading-ring" class="loading-ring hidden"></div>
+    <div id="loading-message">
+      Sending, please wait...
+    </div>
+    <!-- response -->
+    <div id="response-icon-container">
+      <img src="" alt="">
+    </div>
+    <div id="response-message-container">
+      Form Sent Succesfully
+      <a id ="response-button-container" href=""><button id="go-back-btn">GO HOME</button></a>
+    </div>
+  </div>
+
+
+
+
+  
+  <!--Script for contact form-->
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init("tIfNn14Sh838k9l72");
+    })();
+  </script>
+
+  <script src="js/preloader.js"></script>
+  <script src="js/navigation.js"></script>
+
+  <script src = "js/messageBox.js"></script>
+  <script src="js/contact.js"></script>
+
 </body>
 </html>
+
+
+
+
+
+
+
