@@ -1,7 +1,13 @@
 //*************************** PHONE VERFICATION ***************************
+var nameField = document.getElementById("name");
+var emailField = document.getElementById("email");
+var phoneField = document.getElementById("phone");
+var queryField = document.getElementById("query");
+
+
+
 function validatePhone() {
   
-  var phoneField = document.getElementById("phone");
   var phone = phoneField.value;
   
   // Regular expression for name validation
@@ -38,7 +44,6 @@ function validatePhone() {
 //*************************** EMAIL VERFICATION ***************************
 function validateEmail() {
   
-  var emailField = document.getElementById("email");
   var email = emailField.value;
   
   // Regular expression for email validation
@@ -72,7 +77,6 @@ function validateEmail() {
 //*************************** Name VERFICATION ***************************
 function validateName() {
   
-  var nameField = document.getElementById("name");
   var name = nameField.value;
   
   // Regular expression for name validation
@@ -106,7 +110,6 @@ function validateName() {
 //*************************** Message VERFICATION ***************************
 function validateQuery() {
   
-  var queryField = document.getElementById("query");
   var query = queryField.value;
   
   if(query===""){
@@ -126,19 +129,44 @@ function validateQuery() {
   }
 }
 
+
+function scrollToElement(element) {
+  const offsetTop = element.getBoundingClientRect().top;
+  const scrollOptions = {
+    behavior: 'smooth',
+    block: 'start', 
+    inline: 'nearest', 
+  };
+
+  //this adds extra 7 percent to scroll so i can see label also
+  const offsetPixels = 7 * window.innerHeight / 100;
+  window.scrollBy({ top: offsetTop - offsetPixels, ...scrollOptions });
+}
+
 function sendMail() {
-  if (validateName() && validateEmail() && validatePhone() && validateQuery()){
+
+  if(!validateName()){
+    scrollToElement(nameField);
+    return;
+  }else if (!validateEmail()){
+    scrollToElement(emailField);
+    return;
+  }else if(!validatePhone()){
+    scrollToElement(phoneField);
+    return;
+  }else if(!validateQuery()){
+    scrollToElement(queryField);
+    return;
+  }else{
     var params = {
       name: document.getElementById("name").value,
       email: document.getElementById("email").value,
       phone: document.getElementById("phone").value,
       message: document.getElementById("query").value,
-      
     };
-  }else{
-
-    return;
   }
+
+
   showMessageBox();
 
   const serviceID = "service_3uvdrk8";

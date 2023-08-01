@@ -120,6 +120,9 @@ strong{
   color: white;
 }
 
+label[for="name"]{
+  margin-top: 20px;
+}
 
 @media only screen and (min-width: 900px) {
   .contact__us--form input, textarea{

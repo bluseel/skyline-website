@@ -1,3 +1,16 @@
+const formElem = document.getElementById("form-section");
+const nameElem = formElem.querySelector('#name-input');
+const fatherNameElem = formElem.querySelector('#father-name-input');
+const casteElem = formElem.querySelector('#caste-input');
+const genderElem = formElem.querySelector('#gender-input');
+const religionElem = formElem.querySelector('#religion-input');
+const placeOfBirthElem = formElem.querySelector('#place-of-birth-input');
+const addressElem = formElem.querySelector('#address-input');
+const phoneElem = formElem.querySelector('#phone-input');
+const lastSchoolAttendedElem = formElem.querySelector('#last-school-attended-input');
+const dateElem = formElem.querySelector('#date-of-birth-day');
+const monthElem = formElem.querySelector('#date-of-birth-month');
+const yearElem = formElem.querySelector('#date-of-birth-year');
 
 const data = {
   name: 'none', 
@@ -14,12 +27,25 @@ const data = {
   dobYear: 'none'
 };
 
-const formElem = document.getElementById("form-section");
 
 formElem.querySelector('#terms-text').addEventListener("click", function() {
   var checkbox = document.getElementById("terms-cb");
   checkbox.checked = !checkbox.checked;
 });
+
+//scrolls to that field
+function scrollToElement(element) {
+  const offsetTop = element.getBoundingClientRect().top;
+  const scrollOptions = {
+    behavior: 'smooth',
+    block: 'start', 
+    inline: 'nearest', 
+  };
+
+  //this adds extra 7 percent to scroll so i can see label also
+  const offsetPixels = 7 * window.innerHeight / 100;
+  window.scrollBy({ top: offsetTop - offsetPixels, ...scrollOptions });
+}
 
 //validation for text-notEmpty
 function validation(inputElem, validationType){
@@ -29,7 +55,8 @@ function validation(inputElem, validationType){
       inputElem.setAttribute("placeholder", "This field can not be empty");
       inputElem.classList.add("error-placeholder");
       inputElem.classList.add("error-input-animation");
-  
+      
+      scrollToElement(inputElem);
       // After the animation completes, remove the error-input-animation class, so i can re-use it
       setTimeout(function() {
         inputElem.classList.remove('error-input-animation');
@@ -46,6 +73,7 @@ function validation(inputElem, validationType){
           inputElem.classList.add("error-placeholder");
           inputElem.classList.add("error-input-animation");
       
+         scrollToElement(inputElem);
           // After the animation completes, remove the error-input-animation class, so i can re-use it
           setTimeout(function() {
             inputElem.classList.remove('error-input-animation');
@@ -61,6 +89,7 @@ function validation(inputElem, validationType){
           inputElem.classList.add("error-placeholder");
           inputElem.classList.add("error-input-animation");
       
+          scrollToElement(inputElem);
           // After the animation completes, remove the error-input-animation class, so i can re-use it
           setTimeout(function() {
             inputElem.classList.remove('error-input-animation');
@@ -81,7 +110,8 @@ function validation(inputElem, validationType){
       
       currentSelection.classList.add("red-text");
       inputElem.classList.add("error-input-animation");
-  
+      
+      scrollToElement(inputElem);
       // After the animation completes, remove the error-input-animation class, so i can re-use it
       setTimeout(function() {
         inputElem.classList.remove('error-input-animation');
@@ -114,18 +144,7 @@ function tncBoxValidation (){
 
 //includes all validations
 function validateAll(){
-  const nameElem = formElem.querySelector('#name-input');
-  const fatherNameElem = formElem.querySelector('#father-name-input');
-  const casteElem = formElem.querySelector('#caste-input');
-  const genderElem = formElem.querySelector('#gender-input');
-  const religionElem = formElem.querySelector('#religion-input');
-  const placeOfBirthElem = formElem.querySelector('#place-of-birth-input');
-  const addressElem = formElem.querySelector('#address-input');
-  const phoneElem = formElem.querySelector('#phone-input');
-  const lastSchoolAttendedElem = formElem.querySelector('#last-school-attended-input');
-  const dateElem = formElem.querySelector('#date-of-birth-day');
-  const monthElem = formElem.querySelector('#date-of-birth-month');
-  const yearElem = formElem.querySelector('#date-of-birth-year');
+ 
 
   const isValid = 
   (validation(nameElem, "text") && validation(fatherNameElem, "text") && validation(casteElem, "text") &&
