@@ -1,7 +1,1 @@
-[ {"buttonName":null,"link":null,"doesExists":true,"buttonType":null,"subtext":"z","addButton":false,"heading":"z"},
-  {"buttonName":null,"link":null,"doesExists":true,"buttonType":null,"subtext":"y","addButton":false,"heading":"y"},
-  {"buttonName":null,"link":null,"doesExists":true,"buttonType":null,"subtext":"x","addButton":false,"heading":"x"},
-  {"buttonName":null,"link":null,"doesExists":true,"buttonType":null,"subtext":"w","addButton":false,"heading":"w"},
-  {"buttonName":null,"link":null,"doesExists":true,"buttonType":null,"subtext":"v","addButton":false,"heading":"v"},
-  {"buttonName":null,"link":null,"doesExists":true,"buttonType":null,"subtext":"r","addButton":false,"heading":"r"},
-null]
+[{"buttonName":"Go To Page","link":"https://www.facebook.com/profile.php?id=100078022390227","doesExists":true,"subtext":"We have made a new page for Skyline Public Highschool Khaipur.\nClick this button \"Go To Page\" to open facebook page","buttonType":"Custom","addButton":true,"heading":"New Skyline Facebook Page"},null,null,null,null,null,null]
