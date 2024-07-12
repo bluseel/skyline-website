@@ -366,7 +366,7 @@ button:focus{
       #mirror-container{
         position: absolute;
         z-index: 100;
-        inset: 50px 0 0 200px; 
+        inset: 50px 0 0 20vw; 
         right: 250px;
         width: 1000px;
         aspect-ratio: 1/1.5;
